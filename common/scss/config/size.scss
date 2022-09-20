@@ -1,21 +1,88 @@
 @charset 'utf-8';
 
 :root {
-	// page commom size
-	// 默认字体大小
+	// Font size
+	// 默认字号/左导航/页签/表格内文字/顶栏
 	--default-font-size: 14px;
-	// 描述及提示文字大小
-	--default-prompt-font-size: 12px;
-	// 小标题文字大小
-	--min-title-size: 16px;
-	// 一般标题文字大小
-	--default-title-size: 18px;
-	// 大标题文字大小
-	--max-title-size: 20px;
-	// 行间距
-	--default-line-height: 1.777777777;
-	// 间距
-	--default-spacing: 15px;
-	// 边角
+	// 状态文字/备注文字
+	--prompt-font-size: 12px;
+	// 选中
+	--select-font-size: 16px;
+	// 日志/服务日志标题
+	--title-font-size: 18px;
+	// 地图服务/一级标题/弹窗标题
+	--1th-title-font-size: 16px;
+
+	// line-height
+	// 默认字号/左导航/页签/表格内文字/顶栏
+	--default-line-height: 20px;
+	// 状态文字/备注文字
+	--prompt-line-height: 18px;
+	// 选中
+	--select-line-height: 22px;
+	// 日志/服务日志标题
+	--title-line-height: 24px;
+	// 地图服务/一级标题/弹窗标题
+	--1th-title-line-height: 22px;
+
+	//  border
+	// 默认边角
 	--default-radius: 4px;
+	// banner 高度
+	--default-banner-height: 600px;
+
+	// Margin
+	// 默认间距
+	--default-spacing: 10px;
+	// 弹窗间距
+	--default-spacing-content-top: 30px;
+	--default-spacing-content-bottom: 5px;
+	// 选择地图模板下间距
+	--select-map-template-spacing: 15px;
+	// 选择地图模板左右间距
+	--select-map-left-right-template-spacing: 20px;
+
+	// header
+	// 默认标题栏高度
+	--default-header-height: 60px;
+	// 标题栏间距
+	--default-header-spacing-size: 15px;
+
+	// scrollbar
+	// 默认滚动条宽度
+	--default-scrollbar-width: 8px;
+	// 默认滚动条高度
+	--default-scrollbar-height: 12px;
+	// 边角幅度
+	--default-scrollbar-radius: 8px;
+
+	// logo
+	// logo图片大小
+	--logo-img-size: 35px;
+
+	// 默认高度
+	--default-height: 48px;
+	// 单行高度
+	--default-row-line-height: 35px;
+
+	// page commom size
+	// 默认图标字体大小
+	--default-font-icon-size: var(--default-font-size);
+	// 行间距
+	--default-line-height: 1.5555555555;
+	// 工具栏宽度
+	--default-tool-width-size: 240px;
+	// 工具详情栏宽度
+	--default-tool-info-width-size: 380px;
+	// 菜单栏宽度
+	--default-sider-width-size: 80px;
+	// 菜单栏功能模块宽度
+	--default-sider-tool-width-size: 240px;
+	// 新增目录高度
+	--default-tree-add-height-size: 50px;
+	//
+	--default-portal-size: 160px;
+	// 媒体视觉宽度
+	--default-media-width: 1200px;
+	//
 }

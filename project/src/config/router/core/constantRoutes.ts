@@ -3,26 +3,35 @@
  * @Description  :
  * @Email        : gouqingping@yahoo.com
  * @Date         : 2021-01-14 16:08:20
- * @LastEditors  : Pat
- * @LastEditTime : 2021-12-17 15:06:48
+ * @LastEditors  : GGos
+ * @LastEditTime : 2022-09-13 10:29:36
  */
 
 import type { RouteRecordRaw } from 'vue-router';
 export default [
 	{
-		path: '/:pathMatch(.*)*',
-		name: 'not-found',
-		meta: {
-			name: '404页面丢失！',
-		},
-		component: () => import('@view/Error/index.ts'),
-	},
-	{
 		path: '/',
-		name: 'Home',
+		name: '',
 		meta: {
-			name: '首页',
+			isMenu: false,
 		},
-		component: () => import('@view/Home.vue'),
+		component: () => import('@view/View/IRoute.vue'),
+		children: [
+			{
+				path: '/:pathMatch(.*)*',
+				name: 'not-found',
+				component: () => import('@view/Error'),
+			},
+			{
+				path: '',
+				name: '首页',
+				component: () => import('@view/Home.vue'),
+			},
+			{
+				path: 'view',
+				name: 'View',
+				component: () => import('@view/View/IView.vue'),
+			},
+		],
 	},
 ] as RouteRecordRaw[];

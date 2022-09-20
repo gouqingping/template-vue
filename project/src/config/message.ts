@@ -1,21 +1,17 @@
+/* eslint-disable prettier/prettier */
 /*
  * @Autor        : Pat
  * @Description  : Warning Text
  * @Email        : gouqingping@yahoo.com
  * @Date         : 2021-11-01 18:56:41
- * @LastEditors  : Pat
- * @LastEditTime : 2022-04-12 14:55:54
+ * @LastEditors: yusha yushazh@icloud.com
+ * @LastEditTime: 2022-08-04 17:32:31
  */
 import { output } from '@shared/_utlis';
-export const message = {
-	userLoginOk: '登录成功。',
-	userNameEnter: '请输入用户名',
-	userPasswordenter: '请输入用户密码',
-	passwordInvalid: '密码错误！',
-	internalError: '系统内部错误！请联系管理员。',
-	userNameOrPasswordIncorrect: '用户名或者密码错误',
-	userNameIsNull: '用户名不能为空！',
-	passwordIsNull: '密码不能为空！',
+import { toLowerCamelCase } from 'igu/lib/core/basic';
+import { AnyObject } from 'igu/lib/core/utils';
+export const message: AnyObject = {
+	userLoginSuccess: '登录成功',
 };
 /**
  * @description: output Message
@@ -27,3 +23,11 @@ export const message = {
  */
 export const outputMessage = (arg: string, arg1?: string): any =>
 	output(arg, arg1, message);
+
+export const getMessage = (name: string): string => {
+	name =
+		name && name.lastIndexOf(':') >= 0
+			? name.slice(name.lastIndexOf(':')).replace(':', '')
+			: name;
+	return (name && message[toLowerCamelCase(name)]) || '';
+};

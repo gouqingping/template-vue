@@ -27,7 +27,7 @@ declare module '@config/amb' {
 	export const ENV: string;
 	export const ENV_URL: string;
 	export const api: { [key: string]: string };
-	export const config: AnyObject;
+	export const base: AnyObject;
 	const amb: { [key: string]: any };
 	export default amb;
 }

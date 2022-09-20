@@ -3,13 +3,13 @@
  * @Description  : config
  * @Email        : gouqingping@yahoo.com
  * @Date         : 2021-01-29 12:39:06
- * @LastEditors  : Pat
- * @LastEditTime : 2021-09-28 14:28:18
+ * @LastEditors  : GGos
+ * @LastEditTime : 2022-09-15 14:03:59
  */
 import { AnyObject } from 'igu/lib/core/utils';
 import { output, eachModules, isType } from '@shared/_utlis';
-
-export { RequestObject } from '@config/type/global';
+export type { ErrorContent } from './config/request';
+export { requestApi } from './config/request';
 const configObject: AnyObject = {};
 // Output the specified file in the specified folder
 eachModules(import.meta.globEager('./core/*'), (key: any, item: AnyObject) => {
@@ -24,6 +24,12 @@ eachModules(import.meta.globEager('./core/*'), (key: any, item: AnyObject) => {
 			(name: string) => (configObject[fileName][name] = item[name]),
 		);
 });
+
+export interface DefineRequest {
+	msg: string;
+	code: number;
+	data: AnyObject | any[];
+}
 
 export default function (configKey: any, option: Array<string> | string = '') {
 	let url = '';

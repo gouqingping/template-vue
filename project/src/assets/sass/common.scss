@@ -1,0 +1,33 @@
+.egis-portal {
+	// Font Color
+	--default-font-color: #333 !important;
+	--content-min-height: 520px;
+	--fill-color: rgba(235,37,47,0.1);
+	&-header {
+		// header height
+		--default-header-height: 68px;
+		// header box shadow
+		--default-header-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+	}
+	color: var(--default-color) ;
+
+	.ant-pagination {
+		&-item , &-next,&-prev,&-ellipsis{
+			border: 0;
+			background-color: var(--default-portal-background-color) !important;
+			a {
+			&:hover {
+				color: var(--default-color);
+			}}
+			&-active {
+				border: 0;
+				a {
+					color: var(--default-color);
+				}
+			}
+		}
+		&-item-link-icon {
+			color: var(--default-color) !important;
+		}
+	}
+}

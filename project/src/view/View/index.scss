@@ -1,0 +1,20 @@
+.egis {
+	&-use {
+		&-login-btn {
+			background-color: var(--default-color);
+			color: white;
+			padding: 0 calc(var(--default-spacing) * 2);
+		}
+	}
+	&-footer {
+		&--text {
+			color: var(--bar-font-color);
+			text-align: center;
+		}
+	}
+}
+
+.ant-dropdown {
+	background-color: white;
+	z-index: 9999;
+}

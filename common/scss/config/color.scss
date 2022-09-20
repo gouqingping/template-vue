@@ -1,13 +1,117 @@
 @charset 'utf-8';
+
 :root {
-	--default-font-family: 'PingFangLight PingFangRegular PingFangMedium';
+	// --fontFamily: "Arial";
 	// Page color
 	// 主色调
-	--default-color: #1890ff;
-	// hover
-	--default-active-color: #f5222d;
-	// 边框颜色
-	--default-border-color: #d9d9d9;
+	--default-color: #e73d46;
+	// 内容背景色
+	--default-background-color: #343434 !important;
+	// 门户内容背景色
+	--default-portal-background-color: #f6f6f6;
+	// 边线颜色
+	--default-boder-color: #272727 !important;
+	// 出入文本性质背景色
+	--text-edit-background-color: #3b3b3b;
+	// 出入文本性质边框色
+	--text-edit-border-color: #8a8a8a;
+	--default-border-color: #8a8a8a !important;
+	--default-portal-border-color: #f0f0f0;
+
+	// Font Color
+	// 字体主色调
+	--default-font-color: #fff !important;
+	// 选中文字颜色
+	--active-font-color: var(--default-color);
+	// 次要文字颜色
+	--secondary-font-color: #d9d9d9;
+	// 提示文字颜色
+	--info-font-color: #bbbbbb;
+	// 提示文字颜色
+	--bar-font-color: #bcbcbc;
+
+	// 禁用样式
+	--default-disabled-color: #d9d9d9 !important;
+	--default-disabled-border-color: #343434 !important;
+	--default-disabled-background: #343434 !important;
+
+	// 选中
+	--default-active-color: #fff !important;
+	--default-active-background-color: #e73d46 !important;
+
+	// 功能性颜色
+	// 成功状态
+	--success-color: #56ee23;
+	// 进行中状态
+	--conduct-color: #23bbee;
+	// 错误失败状态
+	--error-color: #e73d46;
+
+	--waning-color: #ff8b2c;
+
+	// 导航栏
+	// 编辑页面导航背景色、二级菜单背景色、顶部背景色
+	--default-nav-background-color: #272727;
+	// 一级菜单背景色
+	--default-menu-background-color: #222222;
+	// 内容背景色
+	// 编辑页面导航辅助背景色
+	--default-nav-secondary-background-color: #202020;
+	// 背景色
+	--header-background-color: #292c2d;
+	// 边色
+	--header-border-color: #000;
 	// 字体颜色
-	--default-font-color: #333;
+	--header-font-color: white;
+	// 导航选中背景色
+	--header-active-color: #333333;
+	// 菜单文字颜色
+	--default-meun-text-color: white;
+
+	// 弹窗
+	// 弹窗背景色
+	--model-background-color: #1d1010 !important;
+
+	// 输入框
+	// 输入文本颜色
+	--input-text-color: #333333;
+	// 常规辅助色（三级功能列表）、 导航选中状态背景
+	--aux-secondary-color: #343434;
+	// 补充辅助色 （input背景 ）
+	--com-secondary-color: #202020;
+	// 分页背景色
+	--pagination-background-color: #292929;
+	// checkbox 选中色
+	--checkbox-checked-color: #e73d46;
+	// switch 选中色
+	--switch-checked: #e73d46;
+
+	// 一级辅助色
+	--1th-secondary-font-color: #999;
+	// 编辑页面主体字体色（包含文字图标选中）
+	--default-edit-page-font-color: #fff;
+	// 编辑页面辅助字体色（图标未选中及其相关文字）
+	--aux-secondary-font-color: #8a8a8a;
+	--aux-rgba-font-color: rgba(52, 52, 52, 0.8);
+
+	// 一级辅助色
+	--1th-secondary-color: var(--conduct-color);
+	// 二级辅助色
+	--2th-secondary-color: var(--success-color);
+	// 三级辅助色
+	--3th-secondary-color: #d45f65;
+	// 四级辅助色(线框/线条)
+	--4th-secondary-color: #ebebeb;
+	// 五级辅助色
+	--5th-secondary-color: #f4f4f4;
+	// 六级辅助色
+	--6th-secondary-color: rgba(249, 77, 64, 0.1);
+	// 七级辅助色
+	--7th-secondary-color: #bfbfbf;
+	// 八级辅助色
+	--8th-secondary-color: #343434;
+	// 九级辅助色
+	--9th-secondary-color: rgba(52, 52, 52, 0.2);
+	// 十级辅助色
+	--10th-secondary-color: rgba(249, 77, 64, 0.2);
 }

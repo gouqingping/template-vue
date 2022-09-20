@@ -1,0 +1,242 @@
+@charset 'utf-8';
+
+.el {
+	&-msg-container {
+		position: fixed;
+		z-index: 9999;
+	}
+	&-btn {
+		&-close {
+			border-color: var(--aux-secondary-font-color) !important;
+			background-color: var(--text-edit-background-color) !important;
+			color: var(--default-edit-page-font-color) !important;
+
+			&:hover,
+			&:focus {
+				border-color: var(--aux-secondary-font-color) !important;
+				color: var(--default-edit-page-font-color) !important;
+			}
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	&-hidden {
+		overflow: hidden;
+	}
+
+	&-red {
+		color: var(--default-color);
+	}
+	&-green {
+		color: var(--success-color) !important;
+	}
+
+	&-info {
+		color: var(--aux-secondary-font-color) !important;
+	}
+
+	&-color {
+		color: var(--default-edit-page-font-color);
+	}
+
+	&-padding {
+		padding: var(--default-radius);
+	}
+
+	&-pad {
+		padding: var(--default-spacing);
+	}
+
+	&-l-r-pad {
+		padding: 0 var(--default-spacing);
+	}
+
+	&-t-b-pad {
+		padding: var(--default-spacing) 0;
+	}
+
+	&-height {
+		height: var(--default-row-line-height);
+	}
+
+	&-line-height {
+		line-height: var(--default-row-line-height);
+	}
+
+	&-drag {
+		-webkit-app-region: drag;
+	}
+
+	&-hover {
+		cursor: pointer;
+
+		&:hover {
+			color: var(--default-color);
+		}
+	}
+
+	&-noneuse-select {
+		-moz-user-select: none;
+		/* Firefox私有属性 */
+		-webkit-user-select: none;
+		/* WebKit内核私有属性 */
+		-ms-user-select: none;
+		/* IE私有属性(IE10及以后) */
+		-khtml-user-select: none;
+		/* KHTML内核私有属性 */
+		-o-user-select: none;
+		/* Opera私有属性 */
+		user-select: none;
+		/* CSS3属性 */
+	}
+
+	&-space {
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		display: block;
+	}
+
+	&-nowrap {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	&-spacing {
+		padding: var(--default-spacing);
+		box-sizing: border-box;
+	}
+
+	&-text {
+		&_center {
+			text-align: center;
+		}
+
+		&_left {
+			text-align: left;
+		}
+
+		&_right {
+			text-align: right;
+		}
+	}
+
+	&-pointer {
+		cursor: pointer;
+	}
+
+	&-flex {
+		display: flex;
+
+		&-left {
+			justify-content: left;
+			align-items: flex-start;
+		}
+
+		&-right {
+			justify-content: right;
+		}
+
+		&-center {
+			justify-content: center;
+		}
+		&-end {
+			justify-content: end;
+		}
+
+		&-space {
+			justify-content: space-between;
+
+			&_around {
+				justify-content: space-around;
+			}
+
+			&_between {
+				justify-content: space-between;
+			}
+
+			&_center {
+				justify-content: center;
+			}
+		}
+
+		&-align {
+			align-items: flex-start;
+
+			&_start {
+				align-items: flex-start;
+			}
+
+			&_center {
+				align-items: center;
+			}
+
+			&_end {
+				align-items: flex-end;
+			}
+		}
+	}
+	// 无数据
+	&-not-data {
+		height: 100%;
+		width: 100%;
+		padding: var(--select-map-left-right-template-spacing);
+	}
+	// 列表内容
+	&-list-content {
+		height: 100%;
+		width: 100%;
+	}
+}
+.e {
+	&-image {
+		overflow: hidden;
+	}
+}
+[class^='el-'],
+[class*='el-'],
+[class^='el-'] *,
+[class*='el-'] *,
+[class^='el-'] *::before,
+[class*='el-'] *::before,
+[class^='el-'] *::after,
+[class*='el-'] *::after {
+	box-sizing: border-box;
+}
+
+$TYPE_THEME: (
+	(
+		className: success,
+		backgroundColor: #67c23a,
+	),
+	(
+		className: warning,
+		backgroundColor: #e6a23c,
+	),
+	(
+		className: info,
+		backgroundColor: #909399,
+	),
+	(
+		className: error,
+		backgroundColor: #f56c6c,
+	)
+);
+
+@for $i from 1 through length($TYPE_THEME) {
+	$item: nth($TYPE_THEME, $i);
+
+	.el-color-#{map-get($item, className)} {
+		color: map-get($item, backgroundColor);
+	}
+
+	.el-bg-#{map-get($item, className)} {
+		color: white;
+		background-color: map-get($item, backgroundColor);
+	}
+}

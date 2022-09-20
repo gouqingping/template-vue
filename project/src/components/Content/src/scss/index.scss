@@ -1,0 +1,9 @@
+.egis-portal-content {
+	height: auto;
+	flex: auto;
+	color: var(--default-font-color);
+	background-color: var(--default-portal-background-color);
+	min-height: calc(
+		100% - var(--default-header-height) - var(--default-spacing)
+	);
+}

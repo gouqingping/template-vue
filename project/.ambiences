@@ -2,16 +2,16 @@
 // 开发环境
 [api]
 BASE_URL = ""
-[config]
+[base]
 mock=true
-systemName = "前端开发模版 - template-vue";
+systemName = "前端开发模版 - template-vue-portal";
 
 [[production]]
 // 正式环境
 [api]
 BASE_URL = "http://xxx.api.pro.com";
-[config]
+[base]
 // 系统名称
-systemName = "前端开发模版 - template-vue";
+systemName = "前端开发模版 - template-vue-portal";
 envType="production"
 BASE_API_CONFIG = "./ambiences.config.json"

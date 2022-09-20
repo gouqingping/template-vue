@@ -4,7 +4,7 @@
  * @Email        : gouqingping@yahoo.com
  * @Date         : 2020-02-19 16:24:08
  * @LastEditors  : Pat
- * @LastEditTime : 2022-04-12 14:50:22
+ * @LastEditTime : 2022-08-18 15:56:58
  */
 import type { App } from 'vue';
 import { createStore } from './core';
