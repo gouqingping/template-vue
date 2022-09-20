@@ -3,24 +3,24 @@
  * @Description  :
  * @Email        : gouqingping@yahoo.com
  * @Date         : 2021-10-15 15:35:30
- * @LastEditors  : Pat
- * @LastEditTime : 2022-04-12 14:30:15
+ * @LastEditors: lyj
+ * @LastEditTime: 2022-03-04 16:33:13
  */
 // import { createStore, IStore } from "../core";
 
-interface AnyObject {
-	[key: string]: any;
-}
+import { AnyObject } from 'igu/lib/core/utils';
 export interface IState {
 	code: string;
 	token: string;
 	user: AnyObject;
+	testData: AnyObject;
 }
 
 const state: IState = {
 	code: '',
 	token: '',
 	user: {},
+	testData: {},
 };
 
 const updateToken = (iState: IState, token: string) => {
@@ -30,8 +30,12 @@ const updateToken = (iState: IState, token: string) => {
 const updateUser = (iState: IState, user: AnyObject) => {
 	iState.user = user;
 };
+const updateTestData = (iState: IState, data: AnyObject) => {
+	iState.testData = data;
+};
 
 export default {
 	state,
-	actions: { updateToken, updateUser },
+	actions: { updateToken, updateUser, updateTestData },
+	test: '123123123',
 };

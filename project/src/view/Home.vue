@@ -8,16 +8,18 @@
 -->
 
 <template>
-	<div class="el-flex">
-		<h1 style="font-size: 64px; margin: 10%">{{ systemName }}</h1>
-		<h1 style="font-size: 24px">{{ hallo }}</h1>
+	<div>
+		<h1 style="font-size: 64px; margin: 10%; color: white">
+			{{ systemName }}
+		</h1>
+		<h1 style="font-size: 24px; color: white">{{ hallo }}</h1>
 	</div>
 </template>
 <script setup lang="ts">
 import { state } from '@store';
 const {
 	sys: {
-		config: { systemName },
+		base: { systemName },
 	},
 } = state;
 // This starter template is using Vue 3 <script setup> SFCs

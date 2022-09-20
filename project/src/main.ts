@@ -8,19 +8,18 @@
  */
 import App from './App';
 import { createApp } from 'vue';
-import { config, ENV } from '@config/amb';
+import { base, ENV } from '@config/amb';
 import { setRoute } from '@router';
 import requestRem from '@shared/rem';
 import { setTitle } from 'igu/lib/core/utils';
 import '_common/scss/common.scss';
-import '@components/Message/src/scss/index.scss';
 import { setupProdMockServer } from '../mock/_createProductionServer';
 import { requestApi } from '@api/config/request';
 const app = createApp(App);
 requestApi();
 setRoute(app);
 requestRem(1920);
-config?.moduleName && setTitle(config.moduleName);
+base?.moduleName && setTitle(base.moduleName);
 // Turn off vue related warning messages
 app.config.warnHandler = () => null;
 // Open system performance
@@ -30,7 +29,7 @@ if (ENV === 'dev') {
 	// Whether to enable Mockjs
 	// If the Amb mock parameter is enabled
 	// then mock data simulation is enabled
-	if (config?.mock || !config?.mock) {
+	if (base?.mock || !base?.mock) {
 		setupProdMockServer();
 	}
 } else {

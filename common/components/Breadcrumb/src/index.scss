@@ -1,0 +1,16 @@
+.e-breadcrumb {
+	color: var(--default-font-color);
+	display: flex;
+	border-bottom: 1px solid var(--default-boder-color);
+	&--separator,
+	&--text,
+	&-item .router-link-active {
+		color: var(--1th-secondary-font-color);
+		&:hover {
+			color: var(--default-color);
+		}
+	}
+	&--separator {
+		margin-left: calc(var(--default-spacing) / 1.5);
+	}
+}

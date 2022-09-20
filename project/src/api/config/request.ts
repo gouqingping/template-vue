@@ -7,12 +7,11 @@
  * @LastEditTime : 2022-04-15 17:55:46
  */
 // import Route from "@router";
-import { config, ENV } from '@config/amb';
+import { base, ENV } from '@config/amb';
 import { actions, state } from '@store';
 import { getsub, removeSub } from '@shared/storage';
 import { get, useRequest, useResponse, useConfig } from '@elgis/request';
 import { ref, Ref } from 'vue';
-import Message from '@components/Message';
 import { outputMessage } from '@config/message';
 interface AnyObject {
 	[key: string]: any;
@@ -28,7 +27,7 @@ useConfig({
 });
 
 useRequest(({ url, method, ...requestConfig }: AnyObject) => {
-	if (!config?.mock) {
+	if (!base?.mock) {
 		const tk = getsub('token');
 		if (tk) {
 			requestConfig.headers['Token'] = tk;
@@ -59,7 +58,7 @@ export const requestApi: (callback: (api: AnyObject) => AnyObject) => void = (
 					src.value = data.api;
 					callback?.(data.api);
 				} else {
-					Message.error(
+					console.error(
 						'服务器配置请求失败，配置可能不存在！请联系管理员',
 					);
 				}
@@ -78,12 +77,12 @@ export const errorCatch: (error: AnyObject) => void = ({
 	if (response) {
 		const { data, status } = response;
 		if (status === 500) {
-			Message.error('服务器错误！');
+			console.error('服务器错误！');
 		} else if (data?.errorCode || data?.message) {
 			const msg: string = outputMessage(data?.message);
-			Message.error(msg ? msg : data.message);
+			console.error(msg ? msg : data.message);
 		} else {
-			Message.error('服务器请求失败，接口不存在！');
+			console.error('服务器请求失败，接口不存在！');
 		}
 	}
 };

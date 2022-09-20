@@ -1,0 +1,52 @@
+.egis {
+	&-use {
+		&-login-btn {
+			background-color: var(--default-color);
+			color: var(--default-meun-text-color);
+			padding: 0 calc(var(--default-spacing) * 2);
+		}
+	}
+	&-portal-has-sider {
+		flex-direction: column;
+		display: flex;
+		flex: auto;
+		min-height: 0;
+		height: 100%;
+		.egis-portal-has-sider {
+			flex-direction: row;
+		}
+	}
+}
+
+.el {
+	&-layout-content {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		padding: var(--default-spacing);
+		background: var(--default-background-color);
+	}
+
+	&-breadcrumb {
+		height: var(--default-height);
+	}
+
+	&-content {
+		height: calc(100% - var(--default-height));
+	}
+}
+
+.ant {
+	&-layout {
+		height: 100%;
+
+		&-header {
+			padding: 0;
+			height: var(--default-header-height);
+		}
+
+		&-sider {
+			background: white;
+		}
+	}
+}

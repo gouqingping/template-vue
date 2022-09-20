@@ -4,13 +4,11 @@
  * @Email        : gouqingping@yahoo.com
  * @Date         : 2021-10-18 10:57:51
  * @LastEditors  : Pat
- * @LastEditTime : 2022-04-12 14:30:27
+ * @LastEditTime : 2022-04-12 19:16:37
  */
+import { AnyObject } from 'igu/lib/core/utils';
 import { reactive, readonly } from 'vue';
 import { createPersistStorage } from './stamina';
-interface AnyObject {
-	[key: string]: any;
-}
 
 export interface IStore {
 	state?: AnyObject;

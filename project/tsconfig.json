@@ -13,7 +13,7 @@
 			"@shared/*": ["./src/shared/*"],
 			"@store/*": ["./src/config/store/*"],
 			"@router/*": ["./src/config/router/*"],
-			"@containers/*": ["./src/containers/*"],
+			"@templates/*": ["./src/templates/*"],
 			"@components/*": ["./src/components/*"]
 		}
 	},

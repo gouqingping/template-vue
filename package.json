@@ -25,6 +25,8 @@
 	},
 	"dependencies": {
 		"@elgis/request": "^1.0.10",
+		"@elgis/ui-component": "^1.2.1",
+		"ant-design-vue": "^3.2.12",
 		"igu": "^1.1.7",
 		"sass": "^1.41.1",
 		"vue": "^3.2.6",

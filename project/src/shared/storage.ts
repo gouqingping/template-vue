@@ -6,10 +6,10 @@
  * @LastEditors  : Pat
  * @LastEditTime : 2022-04-12 15:03:50
  */
-import { config } from '@config/amb';
+import { base } from '@config/amb';
 import { isArray, isObject, isString } from 'igu/lib/core/basic';
 import { objectEach } from 'igu/lib/core/utils';
-const sysType: string = config?.sysType || '';
+const sysType: string = base?.sysType || '';
 // 缓存时间 always
 const expiresTime = 60 * 1000 * 60 * 12;
 export declare interface StorageOption {

@@ -41,7 +41,6 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
 				'@images': `${rootResolve('src/assets/images')}`,
 				'@router': `${rootResolve('src/config/router')}`,
 				'@components': `${rootResolve('src/components')}`,
-				'@containers': `${rootResolve('src/containers')}`,
 			},
 			extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue'],
 		},

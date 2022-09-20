@@ -23,7 +23,7 @@ export default function ({ beforeEach }: AnyObject) {
 			_path: RouteLocationNormalized,
 			next: NavigationGuardNext,
 		) => {
-			const pageName = outputStore('config.config.systemName');
+			const pageName = outputStore('sys.base.systemName');
 			const {
 				meta: { name: _toMetaTitle },
 				name: _toName,

@@ -1,0 +1,17 @@
+.egis-portal-header {
+	height: var(--default-header-height);
+	line-height: var(--default-header-height);
+	box-shadow: var(--default-header-box-shadow);
+	color: var(--header-font-color);
+	background-color: var(--header-background-color);
+	&--title {
+		padding: 0 var(--default-spacing);
+		font-size: var(--title-font-size);
+		color: var(--header-font-color);
+	}
+	&--horizontal {
+		.e-space--item {
+			padding-bottom: 0 !important;
+		}
+	}
+}
