@@ -10,7 +10,7 @@
 import { base, ENV } from '@config/amb';
 import { actions, state } from '@store';
 import { getsub, removeSub } from '@shared/storage';
-import { get, useRequest, useResponse, useConfig } from '@elgis/request';
+import { get, useRequest, useResponse, useConfig } from 'axios-https';
 import { ref, Ref } from 'vue';
 import { outputMessage } from '@config/message';
 interface AnyObject {
