@@ -23,7 +23,8 @@ const instances: any = [],
  */
 const Message: any = function (opts: AnyObject | string = {}) {
 	if (typeof opts === 'string') opts = { message: opts, type: 'info' };
-	opts.duration = opts.duration == false ? 0 : opts.duration ? opts.duration : 2000;
+	opts.duration =
+		opts.duration == false ? 0 : opts.duration ? opts.duration : 2000;
 	let options = opts;
 	const ctime = new Date().getTime(),
 		mainLen = document.querySelectorAll('.e-msg-container').length;
@@ -101,7 +102,8 @@ function close(id = '', callback: ((arg: []) => void) | null = null) {
 	for (let i = idx; i < len; i++) {
 		const vms = instances[i].vm;
 		const props: AnyObject = vms.component.props;
-		const stylePos = vms.el?.parentNode?.children?.[0].style?.[props.position];
+		const stylePos =
+			vms.el?.parentNode?.children?.[0].style?.[props.position];
 		if (stylePos) {
 			const pos = parseInt(stylePos, 10) - removedHeight - space;
 			props.offset = pos;
@@ -123,7 +125,10 @@ function close(id = '', callback: ((arg: []) => void) | null = null) {
 Message.install = (app: App) => {
 	app.component(Message.name, Message);
 };
-export default function createMessage(type: string | AnyObject, options?: AnyObject) {
+export default function createMessage(
+	type: string | AnyObject,
+	options?: AnyObject,
+) {
 	let ops: AnyObject = { type: '' };
 	if (typeof type === 'string') {
 		ops = { type, ...options };

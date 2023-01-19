@@ -1,3 +1,3 @@
-export * from './_utlis'
-export * from './rem'
-export * from './storage'
+export * from './_utlis';
+export * from './rem';
+export * from './storage';

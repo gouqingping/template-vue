@@ -13,7 +13,14 @@ export const useProp = {
 		type: String as PropType<string>,
 		default: 'default',
 		validator: (value: string) =>
-			['default', 'primary', 'success', 'warning', 'info', 'error'].includes(value),
+			[
+				'default',
+				'primary',
+				'success',
+				'warning',
+				'info',
+				'error',
+			].includes(value),
 	},
 	// 消息内容
 	message: {
@@ -23,7 +30,8 @@ export const useProp = {
 	// 是否居中
 	center: {
 		type: String as PropType<string>,
-		validator: (value: string) => ['left', 'center', 'right'].includes(value),
+		validator: (value: string) =>
+			['left', 'center', 'right'].includes(value),
 		default: 'left',
 	},
 	// 显示位置
