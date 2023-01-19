@@ -7,7 +7,7 @@
  * @LastEditTime: 2022-09-17 16:17:34
  */
 import { src } from '../config/request';
-import { get } from '@elgis/request';
+import { get } from 'axios-https';
 export interface SysHeaderInterface {
 	image: string;
 	name: string;

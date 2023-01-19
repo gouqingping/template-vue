@@ -10,7 +10,7 @@ import App from './App';
 import { createApp } from 'vue';
 import { base, ENV } from '@config/amb';
 import { setRoute } from '@router';
-import requestRem from '@shared/rem';
+import { requestRem } from '@shared/index';
 import { setTitle } from 'igu/lib/core/utils';
 import { setupProdMockServer } from '../mock/_createProductionServer';
 import { requestApi } from '@api/config/request';

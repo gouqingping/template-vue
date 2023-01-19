@@ -17,9 +17,9 @@ import {
 } from 'vue-router';
 const router = routerBeforeEach(
 	createRouter({
-		history: createWebHistory('/egis-portal'), //createWebHashHistory or createWebHistory,
+		history: createWebHistory('/web-portal'), //createWebHashHistory or createWebHistory,
 		routes: [...constantRoutes] as RouteRecordRaw[],
-		async scrollBehavior(to: any, from: any, savedPosition: any) {
+		async scrollBehavior(to: any, _from: any, savedPosition: any) {
 			// await scrollWaiter.wait();
 			// Use predefined scroll behavior if defined, defaults to no scroll behavior
 			const behavior = 'smooth';

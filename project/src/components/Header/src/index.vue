@@ -7,18 +7,24 @@
  * @LastEditTime : 2022-09-15 15:38:35
 -->
 <template>
-	<header class="egis-portal-header el-flex el-flex-space">
+	<header class="web-portal-header el-flex el-flex-space">
 		<div
 			class="el-flex el-flex-align_center el-l-r-pad el-pointer"
 			@click="toHome"
 		>
-			<EImage :src="image" width="36px" height="36px" class="el-hidden" />
-			<h1 class="egis-portal-header--title">{{ name }}</h1>
+			<EImage
+				v-if="image"
+				:src="image"
+				width="36px"
+				height="36px"
+				class="el-hidden"
+			/>
+			<h1 class="web-portal-header--title">{{ name }}</h1>
 		</div>
 		<main class="el-flex el-flex-end">
 			<ESpace
 				direction="horizontal"
-				class="egis-portal-header--horizontal"
+				class="web-portal-header--horizontal"
 			>
 				<template v-if="navs.length > 0">
 					<Dropdown>
@@ -35,8 +41,8 @@
 <script setup lang="ts">
 import './scss/index.scss';
 import type { PropType } from 'vue';
-import ESpace from '@elgis/ui-component/lib/ESpace';
-import EImage from '@elgis/ui-component/lib/EImage';
+import ESpace from 'ant-design-vue/lib/space';
+import EImage from 'ant-design-vue/lib/image';
 import { Dropdown } from 'ant-design-vue';
 import { useRouter } from 'vue-router';
 export interface MenuType {

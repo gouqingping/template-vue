@@ -7,7 +7,7 @@
  * @LastEditTime : 2022-01-27 15:39:33
  */
 
-export default function requestRem(defineWidth = 1920) {
+export function requestRem(defineWidth = 1920) {
 	(function (win, doc, dWidth) {
 		if (!win.addEventListener) return;
 		const html: HTMLElement = document.documentElement;

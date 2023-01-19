@@ -7,8 +7,8 @@
  * @LastEditTime : 2022-09-14 16:36:26
 -->
 <template>
-	<main class="egis-portal-footer">
-		<div class="egis-portal-footer-main">
+	<main class="web-portal-footer">
+		<div class="web-portal-footer-main">
 			<slot></slot>
 		</div>
 	</main>

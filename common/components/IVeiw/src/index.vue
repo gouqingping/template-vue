@@ -8,7 +8,7 @@
 -->
 <template>
 	<div class="e-viewer">
-		<object  :data="src" class="e-viewer">
+		<object :data="src" class="e-viewer">
 			<embed :src="src" class="e-viewer" />
 		</object>
 	</div>

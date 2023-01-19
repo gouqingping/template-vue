@@ -1,4 +1,4 @@
-.egis-portal-header {
+.web-portal-header {
 	height: var(--default-header-height);
 	line-height: var(--default-header-height);
 	box-shadow: var(--default-header-box-shadow);
@@ -10,6 +10,7 @@
 		font-size: var(--title-font-size);
 	}
 	&--horizontal {
+        padding-right: var(--default-spacing);
 		.e-space--item {
 			padding-bottom: 0 !important;
 		}

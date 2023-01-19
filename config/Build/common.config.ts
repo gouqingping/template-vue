@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import { resolve } from 'path';
 import vue from '@vitejs/plugin-vue';
-import { ambiences } from '@elgis/ambiences';
+import { ambiences } from 'ambiences';
 // import legacy from '@vitejs/plugin-legacy';
 import { PluginOption, UserConfigExport, BuildOptions } from 'vite';
 import ViteComponents, { AntDesignVueResolver } from 'vite-plugin-components';

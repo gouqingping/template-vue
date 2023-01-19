@@ -7,7 +7,7 @@
  * @LastEditTime : 2022-08-22 15:46:20
 -->
 <template>
-	<main class="egis-portal-content">
+	<main class="web-portal-content">
 		<slot></slot>
 	</main>
 </template>

@@ -8,7 +8,7 @@
 -->
 <template>
 	<Header :name="systemName" :image="logo">
-		<ESpace direction="horizontal" class="egis-portal-header--horizontal">
+		<ESpace direction="horizontal" class="web-portal-header--horizontal">
 			<template v-if="navs.length > 0">
 				<div v-for="nav in navs" :key="nav.path">
 					<Dropdown v-if="nav?.children && nav?.children.length > 0">
@@ -49,7 +49,7 @@
 				</div>
 			</template>
 		</ESpace>
-		<div class="egis-use-login-btn">登录</div>
+		<div class="web-use-login-btn">登录</div>
 	</Header>
 	<Content>
 		<RouterView></RouterView>
@@ -57,7 +57,7 @@
 	<Footer>
 		<Row
 			v-if="footer?.describe"
-			class="egis-footer--text el-flex el-flex-center"
+			class="web-footer--text el-flex el-flex-center"
 		>
 			<Col
 				:span="16"
@@ -68,7 +68,7 @@
 		</Row>
 		<Row
 			v-if="footer?.contact || footer?.address || footer?.post"
-			class="egis-footer--text el-flex el-flex-center"
+			class="web-footer--text el-flex el-flex-center"
 		>
 			<Col v-if="footer?.contact" :span="8">
 				联系电话: {{ footer?.contact || '' }}
@@ -82,7 +82,7 @@
 		</Row>
 		<Row
 			v-if="footer?.copyright || footer?.recordNo"
-			class="egis-footer--text el-flex el-flex-center"
+			class="web-footer--text el-flex el-flex-center"
 		>
 			<Col :span="16">
 				{{ footer?.copyright || '' }}
@@ -100,7 +100,7 @@ import Col from 'ant-design-vue/es/col';
 import Header from '@components/Header';
 import Content from '@components/Content';
 import Footer from '@components/Footer';
-import ESpace from '@elgis/ui-component/lib/ESpace';
+import ESpace from 'ant-design-vue/lib/space';
 import { replacePath } from '_common/utils';
 import { Dropdown, Menu, MenuItem } from 'ant-design-vue';
 import SubMenus from './ISubMenu.vue';
@@ -140,13 +140,7 @@ const navs: Ref<AnyObject[]> = ref([
 		children: [],
 	},
 	{
-		name: '资源中心',
-		path: '/resources',
-		icon: '',
-		children: [],
-	},
-	{
-		name: '地图服务',
+		name: '高德地图',
 		path: 'https://amap.com/',
 		icon: '',
 		children: [
@@ -176,7 +170,7 @@ onMounted(() => {
 			? `${state?.sys?.image?.REQUEST_URL || ''}${header?.image}`
 			: '';
 		systemName.value = header?.name || '';
-		footer.value = foot || {};
+		footer.value = foot || ({} as SysFooterInterface);
 	});
 });
 </script>

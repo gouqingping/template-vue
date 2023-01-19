@@ -12,14 +12,9 @@ import { getsub } from '@shared/storage';
 import { AnyObject } from 'igu/lib/core/utils';
 import { getMessage } from '@config/message';
 import { actions, state } from '@config/store';
-import request, {
-	get,
-	useRequest,
-	useResponse,
-	useConfig,
-} from '@elgis/request';
+import request, { get, useRequest, useResponse, useConfig } from 'axios-https';
 import { nextTick, ref } from 'vue';
-import createMessage from '@elgis/ui-component/lib/EMessage';
+import createMessage from '@components/EMessage';
 import { clearState } from '@config/store';
 import { removeSub } from '@shared/storage';
 

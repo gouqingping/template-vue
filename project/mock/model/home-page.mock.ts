@@ -6,7 +6,7 @@
  * @LastEditors  : GGos
  * @LastEditTime : 2022-09-20 09:32:58
  */
-import { Random, setupMock, stringCase, createData } from '../_utlis';
+import { setupMock, stringCase, createData } from '../_utlis';
 export default setupMock(
 	'/home-page',
 	'get',
@@ -14,17 +14,16 @@ export default setupMock(
 		if (stringCase(method) == stringCase('get')) {
 			return createData({
 				header: {
-					image: '/home/egis/static_resource/home-page/header/default-logo.png',
-					name: '易利GIS公共服务云平台',
+					image: '',
+					name: 'WEB PRO',
 				},
 				foot: {
-					address: '成都武侯区易利数字城市科技有限公司4楼',
+					address: '四川省成都市天府新区',
 					email: '',
 					post: '610093',
-					contact: '028-84179100',
-					copyright:
-						'© 2005-2021, 四川易利数字城市科技有限公司 版权所有',
-					recordNo: '蜀ICP备15001263号-1',
+					contact: '028-XXXXXXXX',
+					copyright: '© 2005-2021, GGOS 版权所有',
+					recordNo: '蜀ICP备XXXXXXXX号-1',
 					describe: '',
 				},
 			});

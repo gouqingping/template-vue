@@ -7,7 +7,7 @@
  * @LastEditTime : 2022-09-13 10:43:56
 -->
 <template>
-	<section class="egis-portal-section">
+	<section class="web-portal-section">
 		<slot></slot>
 	</section>
 </template>
