@@ -10,10 +10,7 @@
 	<header class="web-admin-header el-flex el-flex-space">
 		<h1 class="web-admin-header--title">{{ name }}</h1>
 		<main class="el-flex el-flex-end">
-			<ESpace
-				direction="horizontal"
-				class="web-admin-header--horizontal"
-			>
+			<ESpace direction="horizontal" class="web-admin-header--horizontal">
 				<template v-if="navs.length > 0">
 					<div v-for="nav in navs" :key="nav.key">{{ nav.name }}</div>
 				</template>
