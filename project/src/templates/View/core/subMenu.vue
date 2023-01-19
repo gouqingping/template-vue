@@ -34,7 +34,7 @@ import { MenuItem, SubMenu } from 'ant-design-vue';
 import { AnyObject } from 'igu/lib/core/utils';
 import { useRouter } from 'vue-router';
 import { actions } from '@config/store';
-import { RenderVNode } from '@elgis/ui-component/lib/_utlis';
+import { RenderVNode } from '@shared';
 import { replacePath } from '_common/utils';
 export default defineComponent({
 	name: 'ItemMenu',

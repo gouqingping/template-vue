@@ -38,8 +38,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, createVNode, ref, watch } from 'vue';
-import ESpace from '@elgis/ui-component/lib/ESpace';
-import '@elgis/ui-component/lib/theme-default/ESpace.css';
+import ESpace from 'ant-design-vue/lib/space';
 import './index.scss';
 import { AnyObject } from 'igu/lib/core/utils';
 import { useRouter } from 'vue-router';

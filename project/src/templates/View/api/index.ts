@@ -6,7 +6,7 @@
  * @FilePath: \egis-web\egis-portal-manage\src\templates\View\api\index.ts
  * @Description:
  */
-import { get } from '@elgis/request';
+import { get } from 'axios-https';
 import { src } from '../../../api/config/request';
 
 /**

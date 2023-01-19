@@ -24,7 +24,7 @@
 </template>
 <script setup lang="ts">
 import type { PropType } from 'vue';
-import ESpace from '@elgis/ui-component/lib/ESpace';
+import ESpace from 'ant-design-vue/lib/space';
 import './scss/index.scss';
 export interface MenuType {
 	name: string;

@@ -140,5 +140,3 @@ export function clearAll(): any {
 }
 
 export const clear = clearAll;
-
-export default Storage;

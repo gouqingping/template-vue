@@ -25,7 +25,7 @@
 	},
 	"dependencies": {
 		"ant-design-vue": "^3.2.12",
-		"axios-https": "^1.0.1",
+		"axios-https": "^1.0.2",
 		"igu": "^1.1.7",
 		"sass": "^1.41.1",
 		"vue": "^3.2.6",

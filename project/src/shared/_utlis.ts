@@ -6,6 +6,7 @@
  * @LastEditors  : Pat
  * @LastEditTime : 2022-04-12 14:41:40
  */
+import { defineComponent } from 'vue';
 import { AnyObject } from 'igu/lib/core/utils';
 /**
  * @description: Output object parameters based on array conditions
@@ -126,3 +127,15 @@ export function eachModules(
 		callback(key, folderObject[key]);
 	});
 }
+
+export const RenderVNode = defineComponent({
+	props: {
+		vn: {
+			type: Object || null,
+			default: null,
+		},
+	},
+	render(): any {
+		return this.vn;
+	},
+});
