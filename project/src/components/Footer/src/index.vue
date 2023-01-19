@@ -7,7 +7,7 @@
  * @LastEditTime : 2022-08-22 16:07:12
 -->
 <template>
-	<main class="egis-portal-footer">
+	<main class="web-admin-footer">
 		<slot></slot>
 	</main>
 </template>

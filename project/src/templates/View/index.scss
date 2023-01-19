@@ -1,4 +1,4 @@
-.egis {
+.web {
 	&-use {
 		&-login-btn {
 			background-color: var(--default-color);
@@ -6,13 +6,13 @@
 			padding: 0 calc(var(--default-spacing) * 2);
 		}
 	}
-	&-portal-has-sider {
+	&-admin-has-sider {
 		flex-direction: column;
 		display: flex;
 		flex: auto;
 		min-height: 0;
 		height: 100%;
-		.egis-portal-has-sider {
+		.web-admin-has-sider {
 			flex-direction: row;
 		}
 	}

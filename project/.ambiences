@@ -2,7 +2,7 @@
 [api]
 BASE_URL = ""
 [base]
-systemName = "前端开发模版 - template-vue-admin"
+systemName = "WEB-ADMIN"
 envType="dev"
 
 
@@ -10,6 +10,6 @@ envType="dev"
 [api]
 BASE_URL = ""
 [base]
-systemName = "前端开发模版 - template-vue-admin"
+systemName = "WEB-ADMIN"
 envType="production"
 BASE_API_CONFIG = "./ambiences.config.json"

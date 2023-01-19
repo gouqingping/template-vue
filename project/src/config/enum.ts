@@ -30,7 +30,7 @@ export const enum ACHIEVEMENT_SERVICES_TYPE_CN {
 }
 // 系统
 export const enum SYSTEM_NAME_EXTRA {
-	MAP_MANAGE = '/egis-map-manage/',
+	MAP_MANAGE = '/web-manage/',
 }
 // 系统中文
 export const enum SYSTEM_NAME_CN {

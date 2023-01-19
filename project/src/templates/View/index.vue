@@ -7,11 +7,11 @@
  * @LastEditTime: 2022-09-17 16:35:24
 -->
 <template>
-	<section class="egis-portal-has-sider">
+	<section class="web-admin-has-sider">
 		<Header :name="state.sys.base.systemName">
-			<div class="egis-use-login-btn" @click="quit">退出登录</div>
+			<div class="web-use-login-btn" @click="quit">退出登录</div>
 		</Header>
-		<section class="egis-portal-has-sider">
+		<section class="web-admin-has-sider">
 			<Sider :width="'200px'">
 				<EMeun :meuns="meuns"></EMeun>
 			</Sider>
@@ -47,6 +47,7 @@ import { getMenus } from './api';
 import { AnyObject, cloneDeep } from 'igu/lib/core/utils';
 import { ref, Ref, watchEffect } from 'vue';
 import EMeun from './core/menu.vue';
+import { isArray } from 'igu/lib/core/basic';
 
 const route = useRouter();
 const isHome: Ref<boolean> = ref(false);
@@ -103,6 +104,7 @@ const meuns: Ref<AnyObject[]> = ref([
 ]);
 
 const setMenusBreadcrumb = (menus: AnyObject[], parent?: AnyObject[]) => {
+	if (!isArray(menus)) return menus;
 	const arr = menus.map((item: AnyObject) => {
 		const _item: AnyObject = {
 			// ...item,
@@ -159,6 +161,7 @@ const quit: () => void = () => {
 };
 meuns.value = setMenusBreadcrumb(meuns.value);
 getMenus().then((res: AnyObject[]) => {
+	if (!isArray(res)) return;
 	meuns.value = setMenusBreadcrumb(res);
 	actions.updateMenu(meuns.value);
 });

@@ -3,7 +3,7 @@
  * @Date: 2022-09-17 10:29:35
  * @LastEditors: 王菲 2908977907@qq.com
  * @LastEditTime: 2022-09-17 16:38:40
- * @FilePath: \egis-web\egis-portal-manage\src\config\store\modules\menu.ts
+ * @FilePath: \web-web\web-admin-manage\src\config\store\modules\menu.ts
  * @Description:
  */
 import { AnyObject } from 'igu/lib/core/utils';

@@ -3,11 +3,11 @@
  * @Date: 2022-06-13 09:04:40
  * @LastEditors: 王菲 2908977907@qq.com
  * @LastEditTime: 2022-09-17 09:37:36
- * @FilePath: \egis-web\egis-portal-manage\src\templates\View\api\index.ts
+ * @FilePath: \web-web\web-admin-manage\src\templates\View\api\index.ts
  * @Description:
  */
 import { get } from 'axios-https';
-import { src } from '../../../api/config/request';
+import { src } from '@api/config/request';
 
 /**
  * @description: 获取菜单

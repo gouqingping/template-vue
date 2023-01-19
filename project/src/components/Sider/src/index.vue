@@ -8,7 +8,7 @@
 -->
 <template>
 	<aside
-		class="egis-portal-sider"
+		class="web-admin-sider"
 		:style="`flex: 0 0 ${width}; max-width: ${width}; min-width: ${width}; width: ${width};`"
 	>
 		<slot></slot>

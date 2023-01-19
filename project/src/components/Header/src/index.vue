@@ -7,12 +7,12 @@
  * @LastEditTime : 2022-08-22 15:03:50
 -->
 <template>
-	<header class="egis-portal-header el-flex el-flex-space">
-		<h1 class="egis-portal-header--title">{{ name }}</h1>
+	<header class="web-admin-header el-flex el-flex-space">
+		<h1 class="web-admin-header--title">{{ name }}</h1>
 		<main class="el-flex el-flex-end">
 			<ESpace
 				direction="horizontal"
-				class="egis-portal-header--horizontal"
+				class="web-admin-header--horizontal"
 			>
 				<template v-if="navs.length > 0">
 					<div v-for="nav in navs" :key="nav.key">{{ nav.name }}</div>

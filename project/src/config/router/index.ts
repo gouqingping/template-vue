@@ -17,7 +17,7 @@ import {
 	RouteLocationRaw,
 } from 'vue-router';
 const router = createRouter({
-	history: createWebHistory(), //createWebHashHistory or createWebHistory,
+	history: createWebHistory('web-admin'), //createWebHashHistory or createWebHistory,
 	routes: [...constantRoutes] as RouteRecordRaw[],
 	strict: false,
 	async scrollBehavior(to: any, from: any, savedPosition: any) {
