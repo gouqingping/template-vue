@@ -1,6 +1,4 @@
-# Eli for front end cli
-
-2022 年易利数科产品二部前端开发脚手架模板
+# Vue3-ts-admin 前端开发脚手架模板
 
 -   Vue3.x + vite2.x + ECMAScript6 + TypeScript
 -   遗弃 Vuex，使用 Vue3 readonly、 reactive 代替
@@ -301,12 +299,6 @@ console.log(outputStore('page.user'));
 必须执行公司内部前端开发规范、W3C 规范以及基础框架原始[规范 A][vue-a]。
 
 -   每一个功能模块及其组件必须对应编写单元测试文件并且跑通该文件
-
-[anchor-id]:
-	https://alidocs.dingtalk.com/i/team/vr4zEP0pwnLlGDYq/docs/vr4zEWrKVpKAMmDY?corpId=ding487f5e746371c086&iframeQuery=#
-
-请访问公司内部文件（钉钉内文档->团队空间->工程中心知识库->基本前端开发规范） [易
-利科技前端开发规范说明书 V1.1.docx][anchor-id]
 
 ## 单元测试
 
